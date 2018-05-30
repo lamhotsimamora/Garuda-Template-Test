@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Garuda Template Testing | Garuda Javascript 2</title>
+	<script type="text/javascript" src="https://cdn.lamhotsimamora.com/garuda2"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container" id="app">
+		
+	</div>
+	
+		
+	<template id="template_buah">
+		<br>
+		<h2>Nama-nama buah :</h2>
+		<p class="info">
+			<ul class="list-group">
+			  <li class="list-group-item active">Apel</li>
+			  <li class="list-group-item">Jeruk</li>
+			  <li class="list-group-item">Jambu</li>
+			  <li class="list-group-item">Marqisa</li>
+			  <li class="list-group-item">Mangga</li>
+			  <li class="list-group-item">Rambutan</li>
+			  <li class="list-group-item">Sirsak</li>
+			  <li class="list-group-item">Pisang</li>
+			</ul>
+		</p>
+		<button class="btn btn-primary btn-md" onclick="test();">Info Property & Method</button>
+		 <hr>
+	</template>
+
+</body>
+
+<script type="text/javascript">
+	/**
+	 * Mendaftarkan Element DIV dengan ID app
+	 */
+	$app = __({
+		el:'app'
+	});
+
+	/**
+	 * Mendaftarkan Template dan 
+	 * memasukkan kedalam $app 
+	 */
+	 $buah = new GarudaTemplate({
+	 	id:'template_buah'
+	 }).to($app);
+
+	function test()
+	{
+		console.table($buah);
+		_a('Check Console Dibrowser Anda');
+	}
+
+</script>
+</html>
